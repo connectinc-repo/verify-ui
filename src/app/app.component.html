@@ -1,0 +1,14 @@
+<div class="ng-route-outlet" [ngSwitch]="router.url">
+  <div class="main-wrapper ng-route-app" *ngSwitchDefault>
+    <topnav></topnav>
+    <sidenav></sidenav>
+    <div class="page-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="ng-route-auth" *ngSwitchCase="'/auth/login' || '/auth/register'">
+    <div class="main-wrapper login-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
